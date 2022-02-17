@@ -5,5 +5,11 @@
     <string name="title_volume">Manga_Volume</string>
     <string name="title_translator">Manga_Translator</string>
     <string name="title_status_translation">Manga_title_status_translation</string>
+    <string name="title_genre">Manga_title_genre</string>
+    <string name="title_category">Manga_title_category</string>
+    <string name="title_screenwriters">Manga_title_screenwriters</string>
+    <string name="title_painters">Manga_title_painters</string>
+    <string name="title_yearOfIssue">Manga_title_yearOfIssue</string>
+    <string name="title_tags">Manga_title_tags</string>
     <string name="title_status_release">Manga_title_status_release</string>
 </resources>
