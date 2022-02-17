@@ -14,12 +14,16 @@ class Parser : Resource() {
         var translate : String = doc.select("div.subject-meta p:eq(3)").text()
         var transletor : String = doc.select("div.subject-meta p:eq(2)").text()
         val genres = mutableListOf<String>()
+
         var i = 0
         for (element : Element in doc.select("p.elementList > .elem_genre")) {
             genres.add(element.select(".element-link").text())
             Log.i("I",genres[i])
             i++
+
+
         }
+
         Log.i("Name", name)
         Log.i("Description", description)
         Log.i("I", translate)
