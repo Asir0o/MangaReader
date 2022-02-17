@@ -11,7 +11,8 @@ class Manga(
     screenwriters: String,
     painters: String,
     yearOfIssue: String,
-    tags: String
+    tags: String,
+    mangaChapters: MutableList<MangaChapter>
 ) {
     var name: String = name  //Название манги
     var numberOfVolumes: String = numberOfVolumes //Количество томов
@@ -24,6 +25,7 @@ class Manga(
     var painters: String = painters //Художники
     var yearOfIssue: String = yearOfIssue //Год выпуска
     var tags: String = tags //Теги
+    var mangaChapters: MutableList<MangaChapter> = mangaChapters
 
     //    class Manga constructor(
 //        name: String,

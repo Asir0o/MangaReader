@@ -13,6 +13,8 @@ class Parser : Resource() {
         var description : String = doc.select("div.manga-description").text()
         var translate : String = doc.select("div.subject-meta p:eq(3)").text()
         var transletor : String = doc.select("div.subject-meta p:eq(2)").text()
+        var volume : String = doc.select("div.subject-meta p:eq(1)").attr("#text")
+
         val genres = mutableListOf<String>()
 
         var i = 0
@@ -20,14 +22,19 @@ class Parser : Resource() {
             genres.add(element.select(".element-link").text())
             Log.i("I",genres[i])
             i++
-
-
         }
+
+        for (row : Element in doc.select("table.table.table-hover tr")) {
+            MangaChapter(row.select("td.item-title").text(),
+                "https://readmanga.io" + row.select("a").attr("href"))
+        }
+
+//        Manga(name,)
 
         Log.i("Name", name)
         Log.i("Description", description)
         Log.i("I", translate)
-        Log.i("I", transletor)
+        Log.i("I", volume)
 
 
 
