@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MangaReader</string>
+    <string name="title_name">Manga_Name</string>
+    <string name="title_description">Manga_Description</string>
+    <string name="title_volume">Manga_Volume</string>
+    <string name="title_translator">Manga_Translator</string>
+    <string name="title_status_translation">Manga_title_status_translation</string>
+    <string name="title_status_release">Manga_title_status_release</string>
 </resources>

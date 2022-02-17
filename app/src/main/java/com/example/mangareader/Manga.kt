@@ -5,7 +5,7 @@ class Manga(
     numberOfVolumes: String,
     mainTranslator: String,
     statusTranslation: String,
-    statusManga: String,
+    statusReleaseManga: String,
     genres: String,
     category: String,
     screenwriters: String,
@@ -17,7 +17,7 @@ class Manga(
     var numberOfVolumes: String = numberOfVolumes //Количество томов
     var mainTranslator: String = mainTranslator //Основной переводчик
     var statusTranslation: String = statusTranslation //Статус перевода манги
-    var statusManga: String = statusManga //Статус выхода манги
+    var statusReleaseManga: String = statusReleaseManga //Статус выхода манги
     var genres: String = genres //Жанры
     var category: String = category //Категория
     var screenwriters: String = screenwriters //Сценаристы
