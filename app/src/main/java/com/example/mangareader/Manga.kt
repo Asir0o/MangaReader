@@ -1,5 +1,7 @@
 package com.example.mangareader
 
+import java.io.FileDescriptor
+
 class Manga(
     name: String,
     numberOfVolumesAndStatus: String,
@@ -12,7 +14,8 @@ class Manga(
     yearOfIssue: String,
     tags: String,
     titleImage: String,
-    mangaChapters: MutableList<MangaChapter>
+    mangaChapters: MutableList<MangaChapter>,
+    description:String
 ) {
     var name: String = name  //Название манги
     var numberOfVolumesAndStatus: String =
@@ -25,8 +28,10 @@ class Manga(
     var painters: String = painters //Художники
     var yearOfIssue: String = yearOfIssue //Год выпуска
     var tags: String = tags //Теги
-    var titleImage: String = titleImage
-    var mangaChapters: MutableList<MangaChapter> = mangaChapters
+    var titleImage: String = titleImage //url на картинку манги
+    var mangaChapters: MutableList<MangaChapter> = mangaChapters // главы и тома манги
+    var description:String = description
+
 
     //    class Manga constructor(
 //        name: String,

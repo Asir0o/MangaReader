@@ -73,7 +73,8 @@ class Parser : Resource() {
             yearOfIssue,
             tags,
             titleImage,
-            mangaChapters
+            mangaChapters,
+            description
         )
 
 //        Log.i("Title", doc.title())
