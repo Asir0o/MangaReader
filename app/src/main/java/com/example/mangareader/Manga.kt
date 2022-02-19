@@ -3,53 +3,30 @@ package com.example.mangareader
 import java.io.FileDescriptor
 
 class Manga(
-    name: String,
-    numberOfVolumesAndStatus: String,
-    mainTranslator: String,
-    statusTranslation: String,
-    genres: String,
-    category: String,
-    screenwriters: String,
-    painters: String,
-    yearOfIssue: String,
-    tags: String,
-    titleImage: String,
-    mangaChapters: MutableList<MangaChapter>,
-    description:String
-) {
-    var name: String = name  //Название манги
-    var numberOfVolumesAndStatus: String =
-        numberOfVolumesAndStatus //Количество томов и статус выхода манги
-    var mainTranslator: String = mainTranslator //Основной переводчик
-    var statusTranslation: String = statusTranslation //Статус перевода манги
-    var genres: String = genres //Жанры
-    var category: String = category //Категория
-    var screenwriters: String = screenwriters //Сценаристы
-    var painters: String = painters //Художники
-    var yearOfIssue: String = yearOfIssue //Год выпуска
-    var tags: String = tags //Теги
-    var titleImage: String = titleImage //url на картинку манги
-    var mangaChapters: MutableList<MangaChapter> = mangaChapters // главы и тома манги
-    var description:String = description
-
-
-    //    class Manga constructor(
-//        name: String,
-//        numberOfVolumes: Int,
-//        mainTranslator: String,
-//        statusTranslation: String,
-//        statusManga: String,
-//        genres: String,
-//        category: String,
-//        screenwriters: String,
-//        painters: String,
-//        yearOfIssue: String,
-//        tags: String
-//    ) {
-//
-//            name = name
-//
-//    }
-
-
-}
+    //Название манги
+    var name: String,
+    //Количество томов и статус выхода манги
+    var numberOfVolumesAndStatus: String,
+    //Основной переводчик
+    var mainTranslator: String,
+    //Статус перевода манги
+    var statusTranslation: String,
+    //Жанры
+    var genres: String,
+    //Категория
+    var category: String,
+    //Сценаристы
+    var screenwriters: String,
+    //Художники
+    var painters: String,
+    //Год выпуска
+    var yearOfIssue: String,
+    //Теги
+    var tags: String,
+    //url на картинку манги
+    var titleImage: String,
+    // главы и тома манги
+    var mangaChapters: MutableList<MangaChapter>,
+    //Описание манги
+    var description: String
+)

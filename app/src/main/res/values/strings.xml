@@ -12,4 +12,5 @@
     <string name="title_yearOfIssue">Manga_title_yearOfIssue</string>
     <string name="title_tags">Manga_title_tags</string>
     <string name="title_status_release">Manga_title_status_release</string>
+    <string name="title_chapter_name">Manga_title_chapter_name</string>
 </resources>

@@ -40,49 +40,55 @@ class MainActivity : AppCompatActivity() {
         thread.start()
         thread.join()
         if (manga != null) {
-            titleName.setText(manga!!.name)
+            titleName.text = manga!!.name
             setImage(titleImage, manga!!.titleImage)
-            titleVolume.setText(manga!!.numberOfVolumesAndStatus)
-            titleDescription.setText(manga!!.description)
-            titleScreenwriters.setText(manga!!.screenwriters)
-            titleTranslator.setText(manga!!.mainTranslator)
-            titleStatusTranslation.setText(manga!!.statusTranslation)
-            titleGenre.setText(manga!!.genres)
-            titleCategory.setText(manga!!.category)
-            titlePainters.setText(manga!!.painters)
-            titleYearOfIssue.setText(manga!!.yearOfIssue)
-            titleTags.setText(manga!!.tags)
+            titleVolume.text = manga!!.numberOfVolumesAndStatus
+            titleDescription.text = manga!!.description
+            titleScreenwriters.text = manga!!.screenwriters
+            titleTranslator.text = manga!!.mainTranslator
+            titleStatusTranslation.text = manga!!.statusTranslation
+            titleGenre.text = manga!!.genres
+            titleCategory.text = manga!!.category
+            titlePainters.text = manga!!.painters
+            titleYearOfIssue.text = manga!!.yearOfIssue
+            titleTags.text = manga!!.tags
             var titleBool: Boolean = false
             var descriptionBool: Boolean = false
-            titleTags.setOnClickListener({ v1 ->
-                if (!titleBool) {
-                    titleTags.setMaxLines(Integer.MAX_VALUE)
-                    titleBool = true
+            titleTags.setOnClickListener {
+                titleBool = if (!titleBool) {
+                    titleTags.maxLines = Integer.MAX_VALUE
+                    true
                 } else {
-                    titleTags.setMaxLines(1)
-                    titleBool = false
+                    titleTags.maxLines = 1
+                    false
                 }
-            })
-            titleDescription.setOnClickListener ({ v2 ->
-                if (!descriptionBool) {
-                    titleDescription.setMaxLines(Integer.MAX_VALUE)
-                    descriptionBool = true
+            }
+            titleDescription.setOnClickListener {
+                descriptionBool = if (!descriptionBool) {
+                    titleDescription.maxLines = Integer.MAX_VALUE
+                    true
                 } else {
-                    titleDescription.setMaxLines(1)
-                    descriptionBool = false
+                    titleDescription.maxLines = 5
+                    false
                 }
-            })
+            }
         }
     }
+
     //метод загрузки изображения с помощью библиотеки Glide
-    private fun setImage(image:ImageView,url:String): Boolean {
+    private fun setImage(image: ImageView, url: String): Boolean {
         Glide.with(this)
             .load(url)
             .skipMemoryCache(true)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .placeholder(R.drawable.ic_launcher_foreground)
-            .listener(object: RequestListener<Drawable> {
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: com.bumptech.glide.request.target.Target<Drawable>?, isFirstResource: Boolean): Boolean{
+            .listener(object : RequestListener<Drawable> {
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: com.bumptech.glide.request.target.Target<Drawable>?,
+                    isFirstResource: Boolean
+                ): Boolean {
                     return false
                 }
 
@@ -93,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                     dataSource: com.bumptech.glide.load.DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                     return false
+                    return false
                 }
             })
             .into(image)
