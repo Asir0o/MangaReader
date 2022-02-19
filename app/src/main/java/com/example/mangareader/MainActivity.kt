@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         val thread = Thread {
             val parser = Parser()
             manga = parser.parsTitle();
-
         }
         thread.start()
         thread.join()
