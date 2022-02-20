@@ -1,8 +1,10 @@
 package com.example.mangareader
 
-import java.io.FileDescriptor
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-class Manga(
+@Parcelize
+data class Manga (
     //Название манги
     var name: String,
     //Количество томов и статус выхода манги
@@ -29,4 +31,4 @@ class Manga(
     var mangaChapters: MutableList<MangaChapter>,
     //Описание манги
     var description: String
-)
+) : Parcelable

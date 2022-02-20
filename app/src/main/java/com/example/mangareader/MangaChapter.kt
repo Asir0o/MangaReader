@@ -1,9 +1,12 @@
 package com.example.mangareader
 
-class MangaChapter(
-    nameOfChapter: String,
-    ref: String
-){
-    var nameOfChapter: String = nameOfChapter  //Название тома и главы
-    var ref: String = ref //ссылка для чтения
-}
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class MangaChapter(
+    //Название тома и главы
+    var nameOfChapter: String,
+    //ссылка для чтения
+    var ref: String
+) : Parcelable

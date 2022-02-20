@@ -28,7 +28,13 @@
         android:src="@drawable/ic_launcher_background"
         android:layout_gravity="center|top"/>
 
-
+    <Button
+        android:id="@+id/chapters_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="center|top"
+        android:text="@string/chapters_button_name"/>
 
     <TextView
         android:id="@+id/titleVolume"

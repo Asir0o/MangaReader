@@ -1,9 +1,11 @@
 package com.example.mangareader
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
@@ -31,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         val titlePainters: TextView = findViewById(R.id.titlePainters)
         val titleYearOfIssue: TextView = findViewById(R.id.titleYearOfIssue)
         val titleTags: TextView = findViewById(R.id.titleTags)
+        val chaptersButton : Button = findViewById(R.id.chapters_button)
+        val intent = Intent(this, MangaChaptersActivity::class.java)
         var manga: Manga? = null
         val thread = Thread {
             val parser = Parser()
@@ -70,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                     titleDescription.maxLines = 5
                     false
                 }
+            }
+            chaptersButton.setOnClickListener {
+                intent.putExtra(MangaChaptersActivity.TOTAL_COUNT, manga)
+                startActivity(intent)
             }
         }
     }
